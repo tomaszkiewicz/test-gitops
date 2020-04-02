@@ -1,8 +1,9 @@
-cluster:
-  name: test
-  repo: https://github.com/tomaszkiewicz/test-gitops.git
-  repoPathPrefix: helm
+stage1:
+  cluster:
+    name: test
+    repo: https://github.com/tomaszkiewicz/test-gitops.git
+    repoPathPrefix: helm
 
-helmApplications:
-  test1:
-    addonFile: ../../addons/test1.yaml
+  helmApplications:
+    test1:
+      addonFile: ../../addons/test1.yaml
