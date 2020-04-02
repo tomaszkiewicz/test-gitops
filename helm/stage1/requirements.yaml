@@ -1,4 +1,4 @@
 dependencies:
   - name: stage1
-    version: 0.1.0
+    version: 0.1.1
     repository: https://raw.githubusercontent.com/tomaszkiewicz/test-gitops-app-generator/master/
