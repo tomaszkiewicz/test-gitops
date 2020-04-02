@@ -1,0 +1,5 @@
+repoURL: https://github.com/helm/charts
+path: stable/dex
+helm:
+  releaseName: dex
+  values: |

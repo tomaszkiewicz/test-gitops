@@ -1,0 +1,6 @@
+cluster:
+  name: test
+
+applications:
+  test1:
+    addonFile: ../../addons/test1.yaml

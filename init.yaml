@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-gitops-init
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/tomaszkiewicz/test-gitops.git
+    path: helm/stage1
+    helm:
+      valueFiles:
+        - ../../clusters/test/cluster.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default

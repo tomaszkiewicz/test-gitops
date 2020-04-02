@@ -1,0 +1,4 @@
+dependencies:
+  - name: applications
+    version: 0.1.0
+    repository: https://github.com/tomaszkiewicz/test-gitops-app-generator/applications/
