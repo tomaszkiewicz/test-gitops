@@ -1,6 +1,8 @@
 cluster:
   name: test
+  repo: https://github.com/tomaszkiewicz/test-gitops.git
+  repoPathPrefix: helm
 
-applications:
+helmApplications:
   test1:
     addonFile: ../../addons/test1.yaml
