@@ -1,4 +1,4 @@
 dependencies:
   - name: stage2
     version: 0.1.0
-    repository: https://github.com/tomaszkiewicz/test-gitops-app-generator/stage2
+    repository: https://github.com/tomaszkiewicz/test-gitops-app-generator
