@@ -1,0 +1,21 @@
+repoURL: https://github.com/helm/charts
+path: stable/external-dns
+helm:
+  releaseName: external-dns
+  values: |
+    podAnnotations:
+      iam.amazonaws.com/role: k8s-external-dns
+
+    txtOwnerId: "k8s-external-dns"
+    txtPrefix: "external-dns."
+
+    rbac:
+      create: true
+
+    resources:
+      limits:
+        cpu: 50m
+        memory: 50Mi
+      requests:
+        memory: 50Mi
+        cpu: 10m

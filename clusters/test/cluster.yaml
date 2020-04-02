@@ -1,9 +1,12 @@
-stage1:
+stage1: &config
   cluster:
     name: test
     repo: https://github.com/tomaszkiewicz/test-gitops.git
     repoPathPrefix: helm
 
   helmApplications:
-    test1:
-      addonFile: ../../addons/test1.yaml
+    external-dns:
+      addonFile: ../../addons/external-dns.yaml
+
+stage2: *config
+stage3: *config
