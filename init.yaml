@@ -1,16 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-gitops-init
+  name: amcm-clusters
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/tomaszkiewicz/test-gitops.git
-    path: helm/stage1
+    path: amcm
     helm:
-      valueFiles:
-        - ../../clusters/test/cluster.yaml
+      parameters:
+      - name: mode
+        value: clusters
+      - name: repoURL
+        value: https://github.com/tomaszkiewicz/test-gitops.git
+      - name: clusters.test1
+        value: ../../clusters/test1/cluster.yaml
+      - name: clusters.test2
+        value: ../../clusters/test2/cluster.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default

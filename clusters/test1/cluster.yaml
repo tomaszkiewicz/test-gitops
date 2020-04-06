@@ -1,0 +1,7 @@
+argocd-multi-cluster-manager:
+  cluster:
+    server: test1
+
+  helmApplications:
+    external-dns:
+      addonFile: ../../addons/external-dns.yaml
