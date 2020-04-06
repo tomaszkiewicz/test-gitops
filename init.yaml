@@ -14,9 +14,9 @@ spec:
         value: clusters
       - name: repoURL
         value: https://github.com/tomaszkiewicz/test-gitops.git
-      - name: clusters.test1
+      - name: amcm.clusters.test1
         value: ../../clusters/test1/cluster.yaml
-      - name: clusters.test2
+      - name: amcm.clusters.test2
         value: ../../clusters/test2/cluster.yaml
   destination:
     server: 'https://kubernetes.default.svc'

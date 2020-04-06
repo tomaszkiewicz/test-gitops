@@ -1,4 +1,4 @@
-argocd-multi-cluster-manager:
+amcm:
   cluster:
     server: test1
 
