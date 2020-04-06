@@ -10,9 +10,9 @@ spec:
     path: amcm
     helm:
       parameters:
-      - name: mode
+      - name: amcm.mode
         value: clusters
-      - name: repoURL
+      - name: amcm.repoURL
         value: https://github.com/tomaszkiewicz/test-gitops.git
       - name: amcm.clusters.test1
         value: ../../clusters/test1/cluster.yaml
