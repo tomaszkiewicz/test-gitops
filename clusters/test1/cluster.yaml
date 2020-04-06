@@ -1,6 +1,8 @@
 amcm:
   cluster:
     server: test1
+    disableAutoSync: true
+    cascadeDelete: true
 
   helmApplications:
     external-dns:
