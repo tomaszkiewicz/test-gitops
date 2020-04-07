@@ -8,5 +8,5 @@ amcm:
       path: addons/coredns-eks
 
   helmApplications:
-    kube2iam:
-      addonFile: ../../addons/kube2iam.yaml
+    external-dns:
+      addonFile: ../../addons/external-dns.yaml
