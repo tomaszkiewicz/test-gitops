@@ -1,0 +1,11 @@
+amcm:
+  cluster:
+    server: https://35.246.223.148
+
+  kustomizeApplications:
+    coredns-eks:
+      path: addons/coredns-eks
+
+  helmApplications:
+    kube2iam:
+      addonFile: ../../addons/kube2iam.yaml

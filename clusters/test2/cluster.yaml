@@ -1,7 +1,0 @@
-amcm:
-  cluster:
-    server: test2
-
-  helmApplications:
-    kube2iam:
-      addonFile: ../../addons/kube2iam.yaml
