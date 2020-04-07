@@ -1,0 +1,12 @@
+amcm:
+  cluster:
+    disableAutoSync: true
+    cascadeDelete: true
+
+  helmApplications:
+    external-dns:
+      addonFile: ../../addons/external-dns.yaml
+
+  globalApplications:
+    coredns-eks:
+      path: sample/coredns-eks

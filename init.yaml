@@ -9,15 +9,29 @@ spec:
     repoURL: https://github.com/tomaszkiewicz/test-gitops.git
     path: amcm
     helm:
+      values: |
+        amcm:
+          repoURL: https://github.com/tomaszkiewicz/test-gitops.git
+
+          clusters:
+            pc-sre:
+              configPath: ../clusters/pc-sre/cluster.yaml
+              server: https://35.246.223.148
+
+            test1:
+              configPath: ../clusters/test1/cluster.yaml
+              server: https://test1.example.luktom.net
+
+            test2:
+              server: https://test1.example.luktom.net
+
       parameters:
       - name: amcm.mode
         value: clusters
-      - name: amcm.repoURL
-        value: https://github.com/tomaszkiewicz/test-gitops.git
-      - name: amcm.clusters.test1
-        value: ../clusters/test1/cluster.yaml
-      - name: amcm.clusters.pc-sre
-        value: ../clusters/pc-sre/cluster.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
