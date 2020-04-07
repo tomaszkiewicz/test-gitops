@@ -1,6 +1,7 @@
 amcm:
   cluster:
     server: https://35.246.223.148
+    disableAutoSync: true
 
   kustomizeApplications:
     coredns-eks:
